@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: harmonie <harmonie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:06:36 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/23 21:17:40 by harmonie         ###   ########.fr       */
+/*   Updated: 2024/01/02 18:33:16 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strlen(char *c)
+static char	*ft_empty_str(void)
 {
-	int	i;
+	char	*empty_str;
 
-	i = 0;
-	while (c[i])
-		i++;
-	return (i);
+	empty_str = (char *)malloc(1);
+	if (empty_str == NULL)
+		return (NULL);
+	empty_str[0] = '\0';
+	return (empty_str);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -28,20 +28,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*p;
 	size_t			i;
 	unsigned int	a;
-	char			*empty_str;
 
 	if (s == NULL)
 		return (NULL);
 	i = 0;
 	a = ft_strlen((char *)s);
-	if (start > a)
-	{
-		empty_str = (char *)malloc(1);
-		if (empty_str == NULL)
-			return (NULL);
-		empty_str[0] = '\0';
-		return (empty_str);
-	}
+	if (start > (a - 1))
+		return (ft_empty_str());
 	if (len > a - start)
 		len = a - start;
 	p = (char *)malloc(sizeof(char) * (len + 1));

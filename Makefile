@@ -6,7 +6,7 @@
 #    By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/05 14:18:45 by nleoni            #+#    #+#              #
-#    Updated: 2023/12/05 15:31:14 by nleoni           ###   ########.fr        #
+#    Updated: 2024/01/02 18:22:33 by nleoni           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,19 +46,19 @@ SRCS +=	ft_putstr_fd.c
 SRCS +=	ft_putendl_fd.c
 SRCS +=	ft_putnbr_fd.c
 
-SRCS_BONUS +=	ft_lstnew.c
-SRCS_BONUS +=	ft_lstadd_front.c
-SRCS_BONUS +=	ft_lstsize.c
-SRCS_BONUS +=	ft_lstlast.c
-SRCS_BONUS +=	ft_lstadd_back.c
-SRCS_BONUS +=	ft_lstdelone.c
-SRCS_BONUS +=	ft_lstclear.c
-SRCS_BONUS +=	ft_lstiter.c
-SRCS_BONUS +=	ft_lstmap.c
+# SRCS_BONUS +=	ft_lstnew.c
+# SRCS_BONUS +=	ft_lstadd_front.c
+# SRCS_BONUS +=	ft_lstsize.c
+# SRCS_BONUS +=	ft_lstlast.c
+# SRCS_BONUS +=	ft_lstadd_back.c
+# SRCS_BONUS +=	ft_lstdelone.c
+# SRCS_BONUS +=	ft_lstclear.c
+# SRCS_BONUS +=	ft_lstiter.c
+# SRCS_BONUS +=	ft_lstmap.c
 
 OBJS		= $(addprefix $(OBJDIR)/, $(SRCS:.c=.o))
 
-OBJS_BONUS	= $(addprefix $(OBJDIR)/, $(SRCS_BONUS:.c=.o))
+# OBJS_BONUS	= $(addprefix $(OBJDIR)/, $(SRCS_BONUS:.c=.o))
 
 
 OBJDIR		= objects
@@ -91,7 +91,7 @@ $(OBJDIR)/%.o:	%.c
 
 $(OBJS):		$(HEADER) | $(OBJDIR)
 
-$(OBJS_BONUS):	$(HEADER)
+# $(OBJS_BONUS):	$(HEADER)
 
 clean:
 				$(RM) -r $(OBJDIR)

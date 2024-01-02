@@ -6,15 +6,11 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 21:41:37 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/27 23:11:38 by nleoni           ###   ########.fr       */
+/*   Updated: 2023/12/28 15:41:38 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-//#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -32,7 +28,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (dest);
 	}
 	while (n--)
-	{	
+	{
 		*d = *s;
 		d++;
 		s++;

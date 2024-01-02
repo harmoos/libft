@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,7 +6,7 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:46:01 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/10 18:44:09 by nleoni           ###   ########.fr       */
+/*   Updated: 2023/12/28 15:38:24 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned int	b;
-	void	*p;
+	void			*p;
 
 	if (count > 0 && 2147483647 / count < size)
-		return NULL;
+		return (NULL);
 	if (size > 0 && 2147483647 / size < count)
-		return NULL;
+		return (NULL);
 	b = count * size;
 	p = malloc(b);
 	if (p == NULL)

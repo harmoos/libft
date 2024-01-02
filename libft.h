@@ -1,13 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/28 15:55:50 by nleoni            #+#    #+#             */
+/*   Updated: 2023/12/28 15:55:58 by nleoni           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <ctype.h>
+# include <limits.h>
 # include <stddef.h>
 # include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <strings.h>
 # include <sys/types.h>
 # include <unistd.h>
 
@@ -51,10 +64,10 @@ char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
-ssize_t				ft_putchar_fd(char c, int fd);
-ssize_t				ft_putstr_fd(const char *s, int fd);
-ssize_t				ft_putendl_fd(const char *s, int fd);
-ssize_t				ft_putnbr_fd(int n, int fd);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putstr_fd(const char *s, int fd);
+void				ft_putendl_fd(const char *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
 
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **alst, t_list *new);

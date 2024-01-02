@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: harmonie <harmonie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 12:37:10 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/20 14:52:19 by harmonie         ###   ########.fr       */
+/*   Created: 2023/12/28 13:45:59 by nleoni            #+#    #+#             */
+/*   Updated: 2023/12/28 15:39:29 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-//#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

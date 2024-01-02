@@ -10,40 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void    ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    int     count;
-    int     temp;
-    int     div;
-    char    dig;
-    
-    if (n < 0)
-    {
-        write(fd, "-", 1);
-        n = -n;
-    }
-    if (n == 0)
-    {
-        write(fd, "0", 1);
-        return;
-    }
-    count = 0;
-    temp = 0;
-    while (temp > 0)
-    {
-        temp /= 10;
-        count++;
-    }
-    div = 1;
-    while (--count > 0)
-        div *= 10;
-    while (n > 0)
-    {
-        dig = '0' + n / div;
-        write(fd, &dig, 1);
-        n %= div;
-        div /= 10;
-    }
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		n = -n;
+		ft_putchar_fd('-', fd);
+	}
+	if (n < 10)
+		ft_putchar_fd(n + '0', fd);
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 }

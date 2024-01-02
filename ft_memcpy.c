@@ -6,13 +6,11 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:23:47 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/23 21:42:07 by nleoni           ###   ########.fr       */
+/*   Updated: 2023/12/28 15:41:23 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: harmonie <harmonie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:03:31 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/20 14:58:14 by harmonie         ###   ########.fr       */
+/*   Updated: 2024/01/02 17:51:50 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -25,6 +24,6 @@ size_t	ft_strlen(const char *s)
 
 /*int     main()
 {
-    char s[] = "Hello World";
-    printf("%ld", ft_strlen(s));
+	char s[] = "Hello World";
+	printf("%ld", ft_strlen(s));
 }*/

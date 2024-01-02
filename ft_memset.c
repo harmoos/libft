@@ -3,22 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: harmonie <harmonie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 14:53:42 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/20 14:51:03 by harmonie         ###   ########.fr       */
+/*   Created: 2023/12/28 13:47:00 by nleoni            #+#    #+#             */
+/*   Updated: 2023/12/28 15:42:03 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
 	int	i;
-	//char	*a;
 
-	//a = *(char *)s;
 	i = 0;
 	while (n > 0)
 	{
@@ -29,7 +26,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/*int	main()
+/*int	main(void)
 {
 	char s[] = "Ouiaaa je suis la";
 

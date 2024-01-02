@@ -6,20 +6,19 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:28:53 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/28 01:09:11 by nleoni           ###   ########.fr       */
+/*   Updated: 2023/12/28 15:47:15 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
-	int a;
-	char *ptr;
+	int		i;
+	int		a;
+	char	*ptr;
 	char	*s1;
-	
+
 	a = 0;
 	s1 = (char *)s;
 	while (s[a])
@@ -41,5 +40,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 /*int     main()
 {
-    printf("%s\n", ft_strmapi())
+	printf("%s\n", ft_strmapi())
 }*/

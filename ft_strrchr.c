@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,24 +6,23 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:36:46 by nleoni            #+#    #+#             */
-/*   Updated: 2023/11/10 18:27:40 by nleoni           ###   ########.fr       */
+/*   Updated: 2023/12/28 15:48:26 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	int	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 		i++;
 	while (i > 0 && s[i] != (char)c)
 		i--;
 	if (s[i] == (char)c)
-		return (char *)&s[i];
+		return ((char *)&s[i]);
 	return (NULL);
 }
 
