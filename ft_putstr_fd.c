@@ -6,7 +6,7 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 13:47:57 by nleoni            #+#    #+#             */
-/*   Updated: 2023/12/28 17:50:12 by nleoni           ###   ########.fr       */
+/*   Updated: 2024/01/06 20:49:38 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(const char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);

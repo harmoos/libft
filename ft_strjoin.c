@@ -6,7 +6,7 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:37:14 by nleoni            #+#    #+#             */
-/*   Updated: 2023/12/28 15:46:08 by nleoni           ###   ########.fr       */
+/*   Updated: 2024/01/06 21:00:09 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		b;
 	char	*str;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	a = ft_strlen((char *)s1);
 	b = ft_strlen((char *)s2);
 	str = (char *)malloc(sizeof(char) * (a + b + 1));

@@ -6,7 +6,7 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 17:09:50 by nleoni            #+#    #+#             */
-/*   Updated: 2023/12/28 19:10:38 by nleoni           ###   ########.fr       */
+/*   Updated: 2024/01/07 15:20:36 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,30 +38,32 @@ size_t	ft_wordslen(const char *s, char c)
 	return (i);
 }
 
-void	*ft_free(char **r)
-{
-	size_t	i;
+// void	*ft_free(char **r)
+// {
+// 	size_t	i;
 
-	i = 0;
-	while (r[i])
-	{
-		free(r[i]);
-		i++;
-	}
-	free(r);
-	return (NULL);
-}
+// 	i = 0;
+// 	while (r[i] != NULL)
+// 	{
+// 		free(r[i]);
+// 		r = NULL;
+// 		i++;
+// 	}
+// 	free(r);
+// 	return (ft_free(r));
+// }
 
 char	**ft_smalloc(const char *s, char c)
 {
 	size_t	a;
 	char	**r;
 
-	a = 0;
+	if(!s)
+		return (NULL);
 	a = ft_count(s, c) + 1;
 	r = (char **)malloc(a * sizeof(char *));
-	if (r == NULL)
-		return (ft_free(r));
+	if (!r)
+		return (NULL); //ft_free(r)
 	return (r);
 }
 
@@ -71,9 +73,9 @@ char	**ft_split(const char *s, char c)
 	size_t	pos;
 	char	**r;
 
-	if (s == NULL)
-		return (NULL);
 	r = ft_smalloc(s, c);
+	if (r == NULL)
+		return (NULL);
 	i = 0;
 	pos = 0;
 	while (s[i] != '\0')
@@ -82,7 +84,7 @@ char	**ft_split(const char *s, char c)
 		{
 			r[pos] = (char *)malloc(sizeof(char) * (ft_wordslen(s + i, c) + 1));
 			if (!r)
-				return (ft_free(r));
+				return (NULL); //ft_free(r[i])
 			ft_strlcpy(r[pos], (char *)s + i, ft_wordslen(s + i, c) + 1);
 			i += ft_wordslen(s + i, c);
 			pos++;

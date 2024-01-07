@@ -6,7 +6,7 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:23:47 by nleoni            #+#    #+#             */
-/*   Updated: 2023/12/28 15:41:23 by nleoni           ###   ########.fr       */
+/*   Updated: 2024/01/06 20:22:51 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	dest1 = (char *)dest;
 	src1 = (char *)src;
+	if (dest1 == NULL && src1 == NULL)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:28:53 by nleoni            #+#    #+#             */
-/*   Updated: 2023/12/28 15:47:15 by nleoni           ###   ########.fr       */
+/*   Updated: 2024/01/06 20:50:38 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*ptr;
 	char	*s1;
 
+	if (!s)
+		return (NULL);
 	a = 0;
 	s1 = (char *)s;
 	while (s[a])
 		a++;
-	if (!s)
-		return (NULL);
+
 	ptr = (char *)malloc(sizeof(char) * (a + 1));
 	if (ptr == NULL)
 		return (NULL);

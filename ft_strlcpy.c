@@ -6,7 +6,7 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 13:49:25 by nleoni            #+#    #+#             */
-/*   Updated: 2023/12/28 19:00:02 by nleoni           ###   ########.fr       */
+/*   Updated: 2024/01/06 20:27:18 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	i;
 	size_t	src_len;
 
-	if (src == NULL)
-		return (0);
-	src_len = 0;
 	src_len = ft_strlen(src);
 	i = 0;
 	if (size > 0)

@@ -6,7 +6,7 @@
 /*   By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 13:49:03 by nleoni            #+#    #+#             */
-/*   Updated: 2023/12/28 15:46:39 by nleoni           ###   ########.fr       */
+/*   Updated: 2024/01/06 20:28:36 by nleoni           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t sz)
 	size_t	a;
 	size_t	b;
 
+	if (dst == NULL && sz == 0)
+		return (0);
 	i = 0;
 	a = ft_strlen(dst);
 	j = a;

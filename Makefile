@@ -6,7 +6,7 @@
 #    By: nleoni <nleoni@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/05 14:18:45 by nleoni            #+#    #+#              #
-#    Updated: 2024/01/02 18:22:33 by nleoni           ###   ########.fr        #
+#    Updated: 2024/01/06 20:15:14 by nleoni           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,7 +102,7 @@ fclean:			clean
 re:				fclean all
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 .PHONY:			all clean fclean re bonus custom
